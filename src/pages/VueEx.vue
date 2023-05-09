@@ -63,8 +63,9 @@
 </template>
 
 <script>
+
 export default {
-  title:"VueEx",
+  title:"Vue Basic",
   name:'',
   components:{},
   data(){
@@ -97,11 +98,11 @@ export default {
   },
   methods:{
     calculateDate() {
-    /*
+      /*
       const timeStamp = Date.now();
       const formattedString = Date.formatDate(timeStamp, "YYYY-MM-DD HH:mm");
       return formattedString;
-    */
+      */
     },
 
     increment() {
