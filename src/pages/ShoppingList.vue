@@ -8,8 +8,8 @@
         unelevated
         rounded
         icon-right="clear"
-        label="Cancel"
-      ></q-btn>
+        label="Cancel">
+      </q-btn>
       <q-btn
         v-else
         @click="doEdit(true)"
@@ -17,8 +17,8 @@
         unelevated
         rounded
         icon-right="send"
-        label="Add Item"
-      ></q-btn>
+        label="Add Item">
+      </q-btn>
     </q-card-section>
   </q-card-section>
 
@@ -28,8 +28,8 @@
       <q-input
         v-model="newItem"
         @keyup.enter="saveItem"
-        label="아이템 추가"
-      ></q-input>
+        label="아이템 추가">
+      </q-input>
     </q-card-section>
 
     <q-card-section v-if="editing" class="col-4 col-md-3">
@@ -39,13 +39,19 @@
         v-model="newItemHighPriority"
         :true-value="true"
         :false-value="false"
-        label="높은 우선순위"
-      ></q-checkbox>
+        label="높은 우선순위">
+      </q-checkbox>
     </q-card-section>
 
     <!--내용저장-->
     <q-card-section v-if="editing" class="col-12 col-md-3">
-      <q-btn outline rounded color="primary" @click="saveItem()" label="아이템 저장"></q-btn>
+      <q-btn
+        outline
+        rounded
+        color="primary"
+        @click="saveItem()"
+        label="아이템 저장">
+      </q-btn>
     </q-card-section>
   </q-card-section>
 
@@ -61,7 +67,7 @@
         padding
         clickable
         v-ripple
-        >
+      >
         <q-item-section>
           {{ item.label }}
         </q-item-section>
@@ -86,9 +92,9 @@ export default {
     return {
       header:"Shopping List App",
       items : [
-        { id: 1, label: "10 party hats", purchased: true, highPriority: false },
-        { id: 2, label: "2 board games", purchased: true, highPriority: false },
-        { id: 3, label: "20 cups", purchased: false, highPriority: true },
+        // { id: 1, label: "10 party hats", purchased: true, highPriority: false },
+        // { id: 2, label: "2 board games", purchased: true, highPriority: false },
+        // { id: 3, label: "20 cups", purchased: false, highPriority: true },
       ],
       editing:false,
       newItem:"",
@@ -131,12 +137,12 @@ export default {
 </script>
 
 <style>
-.strikeout{
-  text-decoration: line-through;
-  color: #b8c2cc;
-}
-.priority{
-  color: #de751f;
-  font-weight: 600;
-}
+  .strikeout{
+    text-decoration: line-through;
+    color: #b8c2cc;
+  }
+  .priority{
+    color: #de751f;
+    font-weight: 600;
+  }
 </style>
