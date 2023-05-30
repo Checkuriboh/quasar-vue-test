@@ -1,24 +1,24 @@
 function getMixin(vm){
   const {title} = vm.$options;
   if(title){
-    return typeof title ==="function" ? title.call(vm) : title;
+    return typeof title === "function" ? title.call(vm) : title;
   }
 }
 
 const serverMixin = {
   //server side
-  created(){
+  created() {
     const title = getMixin(this);
-    if(title){
+    if (title) {
       this.$ssrContex.title = title;
     }
   }
 }
 
 const clientMixin = {
-  mounted(){
+  mounted() {
     const title = getMixin(this);
-    if(title){
+    if (title) {
       document.title = title;
     }
   }

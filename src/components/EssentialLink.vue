@@ -1,4 +1,5 @@
 <template>
+  <!-- target="_blank" -->
   <q-item
     clickable
     tag="a"
